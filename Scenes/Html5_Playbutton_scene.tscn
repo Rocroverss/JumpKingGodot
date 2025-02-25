@@ -43,4 +43,3 @@ tile_data = PoolIntArray( 720922, 0, 1, 786458, 0, 2, 786459, 0, 1, 851994, 0, 2
 
 [node name="King" parent="." instance=ExtResource( 1 )]
 position = Vector2( 232, -184 )
-currentState = 1

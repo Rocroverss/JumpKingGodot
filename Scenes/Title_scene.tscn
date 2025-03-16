@@ -145,7 +145,7 @@ margin_top = 239.0
 margin_right = 296.0
 margin_bottom = 255.0
 custom_fonts/font = ExtResource( 3 )
-text = "Press X0 to jump"
+text = "Press O  to start a new game"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

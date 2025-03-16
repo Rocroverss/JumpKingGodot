@@ -140,31 +140,44 @@ offset = Vector2( 4, 0 )
 
 [node name="Label" type="Label" parent="."]
 visible = false
-margin_left = 194.0
-margin_top = 239.0
-margin_right = 296.0
-margin_bottom = 255.0
+margin_left = 185.0
+margin_top = 233.0
+margin_right = 363.0
+margin_bottom = 249.0
 custom_fonts/font = ExtResource( 3 )
 text = "Press O  to start a new game"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Timer" type="Timer" parent="Label"]
 wait_time = 0.5
 
 [node name="pressx" type="Label" parent="."]
 visible = false
-margin_left = 194.0
-margin_top = 215.0
-margin_right = 288.0
-margin_bottom = 231.0
+margin_left = 185.0
+margin_top = 209.0
+margin_right = 279.0
+margin_bottom = 225.0
 custom_fonts/font = ExtResource( 3 )
 text = "Press X to jump"
 align = 1
 
 [node name="Timer" type="Timer" parent="pressx"]
+wait_time = 0.5
+
+[node name="SUREDELETE" type="Label" parent="."]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 82.0
+margin_top = 233.0
+margin_right = 412.0
+margin_bottom = 249.0
+custom_fonts/font = ExtResource( 3 )
+text = "[WARNING]: Would you like to delete the current  save?
+YES: Press X 
+NO: Press O"
+align = 1
+
+[node name="Timer" type="Timer" parent="SUREDELETE"]
 wait_time = 0.5
 
 [node name="musicplayer" type="AudioStreamPlayer" parent="."]
@@ -176,3 +189,4 @@ stream = ExtResource( 5 )
 
 [connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="pressx/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="SUREDELETE/Timer" to="." method="_on_Timer_timeout"]

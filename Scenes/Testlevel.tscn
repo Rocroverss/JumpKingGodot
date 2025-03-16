@@ -522,20 +522,20 @@ __meta__ = {
 [node name="bird_cloud" parent="Parallax" instance=ExtResource( 121 )]
 light_mask = 0
 position = Vector2( 304, -6136 )
-frame = 3
+frame = 7
 speed = 22
 
 [node name="bird_cloud2" parent="Parallax" instance=ExtResource( 121 )]
 light_mask = 0
 position = Vector2( 168, -5808 )
-frame = 3
+frame = 7
 direction = -1
 speed = 16
 
 [node name="bird_cloud3" parent="Parallax" instance=ExtResource( 121 )]
 light_mask = 0
 position = Vector2( -52, -5420 )
-frame = 3
+frame = 7
 speed = 8
 
 [node name="clouds4" parent="Parallax" instance=ExtResource( 137 )]
@@ -1389,7 +1389,7 @@ __meta__ = {
 [node name="Bonfire" parent="Props" instance=ExtResource( 105 )]
 light_mask = 0
 position = Vector2( 170, -46 )
-frame = 0
+frame = 2
 centered = true
 
 [node name="01_water" parent="Props" instance=ExtResource( 107 )]
@@ -1416,41 +1416,40 @@ flip_h = true
 [node name="Ovenfire" parent="Props" instance=ExtResource( 109 )]
 light_mask = 0
 position = Vector2( 400, -3520 )
-frame = 1
+frame = 2
 
 [node name="DungeonTorch" parent="Props" instance=ExtResource( 108 )]
 light_mask = 0
 position = Vector2( 304, -4136 )
-frame = 2
+frame = 3
 
 [node name="DungeonTorch2" parent="Props" instance=ExtResource( 108 )]
 light_mask = 0
 position = Vector2( 288, -4136 )
-frame = 3
 
 [node name="DungeonTorch3" parent="Props" instance=ExtResource( 108 )]
 light_mask = 0
 position = Vector2( 280, -4152 )
-frame = 3
 
 [node name="DungeonTorch4" parent="Props" instance=ExtResource( 108 )]
 light_mask = 0
 position = Vector2( 296, -4152 )
-frame = 2
+frame = 3
 
 [node name="DungeonTorch5" parent="Props" instance=ExtResource( 108 )]
 light_mask = 0
 position = Vector2( 312, -4152 )
-frame = 2
+frame = 3
 
 [node name="Old_man" parent="Props" instance=ExtResource( 111 )]
 light_mask = 0
 position = Vector2( 320, -56 )
+frame = 2
 
 [node name="Sewer_drop" parent="Props" instance=ExtResource( 112 )]
 light_mask = 0
 position = Vector2( 336, -2360 )
-frame = 3
+frame = 8
 
 [node name="CathedralCandles" type="Node2D" parent="Props"]
 light_mask = 0
@@ -1462,25 +1461,27 @@ __meta__ = {
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -11656 )
+frame = 3
 offset = Vector2( 4, 2 )
 
 [node name="Candle9" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 208, -11664 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle10" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 216, -11664 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle11" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 240, -11664 )
-frame = 1
 offset = Vector2( 4, 0 )
 flip_h = true
 
@@ -1488,7 +1489,6 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 240, -11656 )
-frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1496,7 +1496,6 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 216, -11656 )
-frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1504,34 +1503,31 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 232, -11664 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle15" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 264, -11728 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle16" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 272, -11728 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle17" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 296, -11728 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle18" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 296, -11720 )
-frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1539,7 +1535,6 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 272, -11720 )
-frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1547,35 +1542,30 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 288, -11728 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle21" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -11760 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle22" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -11760 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle23" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 192, -11760 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle24" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 192, -11752 )
-frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1583,6 +1573,7 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -11752 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1590,32 +1581,33 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 184, -11760 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle27" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 89, -11744 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle28" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 97, -11744 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle29" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 121, -11744 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle30" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 121, -11736 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1623,6 +1615,7 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 97, -11736 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1630,38 +1623,40 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 113, -11744 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle33" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 289, -11824 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle34" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 297, -11824 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle35" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 321, -11824 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle165" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 321, -11824 )
-frame = 1
 offset = Vector2( 4, 0 )
 
 [node name="Candle36" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 336, -11872 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1669,28 +1664,27 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 361, -11872 )
-frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle167" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 361, -11880 )
-frame = 0
+frame = 1
 offset = Vector2( -4, 0 )
 
 [node name="Candle168" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 369, -11880 )
-frame = 0
+frame = 1
 offset = Vector2( -4, 0 )
 
 [node name="Candle169" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 344, -11880 )
-frame = 3
+frame = 0
 offset = Vector2( -4, 0 )
 flip_h = true
 
@@ -1698,13 +1692,14 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 336, -11880 )
-frame = 3
+frame = 0
 offset = Vector2( -4, 0 )
 
 [node name="Candle171" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 336, -11913 )
+frame = 3
 offset = Vector2( -4, -4 )
 flip_h = true
 
@@ -1712,20 +1707,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 344, -11913 )
+frame = 3
 offset = Vector2( -4, -4 )
 
 [node name="Candle173" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 361, -11913 )
-frame = 1
 offset = Vector2( -4, -4 )
 
 [node name="Candle174" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 369, -11913 )
-frame = 0
+frame = 1
 offset = Vector2( -4, -4 )
 flip_h = true
 
@@ -1733,19 +1728,18 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 362, -11910 )
-frame = 0
+frame = 1
 
 [node name="Candle176" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 336, -11910 )
-frame = 3
+frame = 0
 
 [node name="Candle177" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 112, -11872 )
-frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1753,27 +1747,28 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 137, -11872 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle179" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 137, -11880 )
-frame = 3
+frame = 0
 offset = Vector2( -4, 0 )
 
 [node name="Candle180" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 145, -11880 )
-frame = 3
+frame = 0
 offset = Vector2( -4, 0 )
 
 [node name="Candle181" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 120, -11880 )
+frame = 3
 offset = Vector2( -4, 0 )
 flip_h = true
 
@@ -1781,13 +1776,13 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 112, -11880 )
+frame = 3
 offset = Vector2( -4, 0 )
 
 [node name="Candle183" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 112, -11913 )
-frame = 1
 offset = Vector2( -4, -4 )
 flip_h = true
 
@@ -1795,21 +1790,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 120, -11913 )
-frame = 1
 offset = Vector2( -4, -4 )
 
 [node name="Candle185" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 137, -11913 )
-frame = 0
+frame = 1
 offset = Vector2( -4, -4 )
 
 [node name="Candle186" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 145, -11913 )
-frame = 0
+frame = 1
 offset = Vector2( -4, -4 )
 flip_h = true
 
@@ -1817,18 +1811,19 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 138, -11910 )
-frame = 3
+frame = 0
 
 [node name="Candle188" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 112, -11910 )
-frame = 3
+frame = 0
 
 [node name="Candle37" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 297, -11816 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1836,28 +1831,27 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 64, -12055 )
-frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle46" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 72, -12055 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle47" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 88, -12055 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle48" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 96, -12055 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1865,14 +1859,14 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 120, -12055 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle61" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 128, -12048 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -1880,20 +1874,21 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 152, -12048 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle63" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 88, -12048 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle64" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 64, -12048 )
+frame = 3
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -1901,20 +1896,21 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 128, -12055 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle51" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 144, -12055 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle52" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 152, -12055 )
+frame = 3
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -1922,13 +1918,13 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 88, -12024 )
+frame = 3
 offset = Vector2( -2, -2 )
 
 [node name="Candle57" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 88, -12009 )
-frame = 1
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -1936,7 +1932,6 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 96, -12009 )
-frame = 1
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -1944,35 +1939,33 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 116, -12009 )
-frame = 0
+frame = 1
 offset = Vector2( 2, 1 )
 
 [node name="Candle60" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 124, -12009 )
-frame = 0
+frame = 1
 offset = Vector2( 2, 1 )
 
 [node name="Candle54" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 96, -12024 )
-frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle55" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 128, -12024 )
-frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle56" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 112, -12024 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -1980,28 +1973,27 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 216, -12119 )
-frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle66" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 224, -12119 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle67" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 240, -12119 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle68" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 248, -12119 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2009,14 +2001,14 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 272, -12119 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle70" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 280, -12112 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2024,20 +2016,21 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 304, -12112 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle72" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 240, -12112 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle73" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 216, -12112 )
+frame = 3
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2045,20 +2038,21 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 280, -12119 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle75" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 296, -12119 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle76" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 304, -12119 )
+frame = 3
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2066,13 +2060,13 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 240, -12087 )
+frame = 3
 offset = Vector2( -2, -2 )
 
 [node name="Candle78" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 240, -12072 )
-frame = 1
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2080,7 +2074,7 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 248, -12072 )
-frame = 0
+frame = 1
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2088,35 +2082,34 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 268, -12072 )
-frame = 0
+frame = 1
 offset = Vector2( 2, 1 )
 
 [node name="Candle81" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 276, -12072 )
-frame = 0
+frame = 1
 offset = Vector2( 2, 1 )
 
 [node name="Candle82" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 248, -12087 )
-frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle83" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 280, -12087 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle84" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 264, -12087 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2124,27 +2117,28 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 240, -12454 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle126" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 248, -12454 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle127" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 264, -12454 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle128" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 272, -12454 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2152,14 +2146,14 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 296, -12454 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle130" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 304, -12447 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2167,19 +2161,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 328, -12447 )
+frame = 3
 offset = Vector2( 0, -2 )
 
 [node name="Candle132" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 264, -12447 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle133" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 240, -12447 )
-frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2187,19 +2182,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 304, -12454 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle135" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 320, -12454 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle136" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 328, -12454 )
-frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2207,14 +2203,13 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 264, -12422 )
-frame = 1
 offset = Vector2( -2, -2 )
 
 [node name="Candle138" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 264, -12407 )
-frame = 0
+frame = 1
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2222,7 +2217,7 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 272, -12407 )
-frame = 3
+frame = 0
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2230,35 +2225,35 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 292, -12407 )
-frame = 3
+frame = 0
 offset = Vector2( 2, 1 )
 
 [node name="Candle141" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 300, -12407 )
-frame = 3
+frame = 0
 offset = Vector2( 2, 1 )
 
 [node name="Candle142" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 272, -12422 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle143" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 304, -12422 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle144" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 288, -12422 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2266,27 +2261,28 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 136, -12518 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle146" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 144, -12518 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle147" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -12518 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle148" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -12518 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2294,14 +2290,14 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 192, -12518 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle150" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 200, -12511 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2309,19 +2305,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 224, -12511 )
+frame = 3
 offset = Vector2( 0, -2 )
 
 [node name="Candle152" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -12511 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle153" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 136, -12511 )
-frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2329,19 +2326,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 200, -12518 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle155" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 216, -12518 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle156" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 224, -12518 )
-frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2349,14 +2347,13 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -12486 )
-frame = 1
 offset = Vector2( -2, -2 )
 
 [node name="Candle158" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -12471 )
-frame = 0
+frame = 1
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2364,7 +2361,7 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -12471 )
-frame = 3
+frame = 0
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2372,35 +2369,35 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 188, -12471 )
-frame = 3
+frame = 0
 offset = Vector2( 2, 1 )
 
 [node name="Candle161" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 196, -12471 )
-frame = 3
+frame = 0
 offset = Vector2( 2, 1 )
 
 [node name="Candle162" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -12486 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle163" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 200, -12486 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle164" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 184, -12486 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2408,27 +2405,28 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 320, -12063 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle86" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 328, -12063 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle87" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 344, -12063 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle88" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 352, -12063 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2436,14 +2434,14 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 376, -12063 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle90" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 384, -12056 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2451,19 +2449,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 408, -12056 )
+frame = 3
 offset = Vector2( 0, -2 )
 
 [node name="Candle92" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 344, -12056 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle93" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 320, -12056 )
-frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2471,19 +2470,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 384, -12063 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle95" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 400, -12063 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle96" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 408, -12063 )
-frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2491,14 +2491,13 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 344, -12031 )
-frame = 1
 offset = Vector2( -2, -2 )
 
 [node name="Candle98" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 344, -12016 )
-frame = 0
+frame = 1
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2506,7 +2505,7 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 352, -12016 )
-frame = 3
+frame = 0
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2514,35 +2513,35 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 372, -12016 )
-frame = 3
+frame = 0
 offset = Vector2( 2, 1 )
 
 [node name="Candle101" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 380, -12016 )
-frame = 3
+frame = 0
 offset = Vector2( 2, 1 )
 
 [node name="Candle102" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 352, -12031 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle103" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 384, -12031 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle104" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 368, -12031 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2550,27 +2549,28 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 136, -11976 )
-frame = 0
+frame = 1
 offset = Vector2( 0, -2 )
 
 [node name="Candle106" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 144, -11976 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle107" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -11976 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 
 [node name="Candle108" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -11976 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2578,14 +2578,14 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 192, -11976 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle110" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 200, -11969 )
-frame = 3
+frame = 0
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2593,19 +2593,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 224, -11969 )
+frame = 3
 offset = Vector2( 0, -2 )
 
 [node name="Candle112" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -11969 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle113" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 136, -11969 )
-frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2613,19 +2614,20 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 200, -11976 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle115" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 216, -11976 )
+frame = 3
 offset = Vector2( 4, -2 )
 
 [node name="Candle116" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 224, -11976 )
-frame = 1
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2633,14 +2635,13 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -11944 )
-frame = 1
 offset = Vector2( -2, -2 )
 
 [node name="Candle118" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -11929 )
-frame = 0
+frame = 1
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2648,7 +2649,7 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -11929 )
-frame = 3
+frame = 0
 offset = Vector2( 4, 1 )
 flip_h = true
 
@@ -2656,35 +2657,35 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 188, -11929 )
-frame = 3
+frame = 0
 offset = Vector2( 2, 1 )
 
 [node name="Candle121" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 196, -11929 )
-frame = 3
+frame = 0
 offset = Vector2( 2, 1 )
 
 [node name="Candle122" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 168, -11944 )
-frame = 0
+frame = 1
 offset = Vector2( 4, -2 )
 
 [node name="Candle123" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 200, -11944 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 
 [node name="Candle124" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 184, -11944 )
-frame = 3
+frame = 0
 offset = Vector2( 4, -2 )
 flip_h = true
 
@@ -2692,30 +2693,35 @@ flip_h = true
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 313, -11824 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle39" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 2 )
 position = Vector2( 385, -11800 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle40" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 2 )
 position = Vector2( 393, -11800 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle41" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 2 )
 position = Vector2( 417, -11800 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle42" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 2 )
 position = Vector2( 417, -11792 )
+frame = 3
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2723,7 +2729,6 @@ flip_h = true
 light_mask = 0
 material = SubResource( 2 )
 position = Vector2( 393, -11792 )
-frame = 1
 offset = Vector2( 0, -2 )
 flip_h = true
 
@@ -2731,89 +2736,86 @@ flip_h = true
 light_mask = 0
 material = SubResource( 2 )
 position = Vector2( 409, -11800 )
+frame = 3
 offset = Vector2( 4, 0 )
 
 [node name="Candle2" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 152, -11656 )
+frame = 3
 offset = Vector2( 4, 2 )
 
 [node name="Candle3" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 136, -11656 )
-frame = 1
 offset = Vector2( 4, 2 )
 
 [node name="Candle4" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 120, -11656 )
-frame = 1
 offset = Vector2( 4, 2 )
 
 [node name="Candle5" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 136, -11640 )
-frame = 1
 offset = Vector2( 4, 4 )
 
 [node name="Candle7" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 152, -11640 )
-frame = 1
 offset = Vector2( 4, 4 )
 
 [node name="Candle8" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 160, -11640 )
+frame = 3
 offset = Vector2( 4, 4 )
 
 [node name="Candle6" parent="Props/CathedralCandles" instance=ExtResource( 120 )]
 light_mask = 0
 material = SubResource( 1 )
 position = Vector2( 128, -11640 )
-frame = 1
 offset = Vector2( 4, 4 )
 
 [node name="Gramofon" parent="Props" instance=ExtResource( 122 )]
 light_mask = 0
 position = Vector2( 12, -5120 )
-frame = 1
 
 [node name="DungeonTorch6" parent="Props" instance=ExtResource( 108 )]
 position = Vector2( 160, -3536 )
-frame = 2
+frame = 3
 
 [node name="DungeonTorch7" parent="Props" instance=ExtResource( 108 )]
 position = Vector2( 256, -3756 )
-frame = 1
+frame = 2
 
 [node name="DungeonTorch8" parent="Props" instance=ExtResource( 108 )]
 position = Vector2( 160, -3828 )
-frame = 1
+frame = 2
 
 [node name="DungeonTorch9" parent="Props" instance=ExtResource( 108 )]
 position = Vector2( 256, -3948 )
+frame = 1
 
 [node name="Kettle" parent="Props" instance=ExtResource( 139 )]
 position = Vector2( 440, -3536 )
-frame = 1
+frame = 2
 
 [node name="Skeleton" parent="Props" instance=ExtResource( 140 )]
 position = Vector2( 392, -3000 )
 
 [node name="Merchant" parent="Props" instance=ExtResource( 143 )]
 position = Vector2( 32, -5128 )
-frame = 0
 
 [node name="Candle" parent="Props" instance=ExtResource( 120 )]
 position = Vector2( 308, -2233 )
-frame = 3
+frame = 0
 
 [node name="Secret_walls" type="Node2D" parent="."]
 position = Vector2( 0, 360 )
@@ -2880,6 +2882,7 @@ position = Vector2( 2, 5 )
 z_index = 4
 frames = SubResource( 10 )
 animation = "idle"
+frame = 2
 speed_scale = 0.25
 playing = true
 

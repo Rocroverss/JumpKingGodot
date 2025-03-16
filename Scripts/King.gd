@@ -489,12 +489,16 @@ func check_bounces():
 	if not overlappers.empty() and not grounded:
 		for body in overlappers:
 			if body in mapCollisions:
+				# Decide how much to bounce horizontally
 				if abs(velocity.x) > bounceVelocityThreshold:
 					velocity.x = velocity.bounce(velocity.normalized()).x * bounceMultiplier
 				else:
 					velocity.x = velocity.bounce(velocity.normalized()).x
 				stunned = true
-				if abs(velocity.x) > bounceSoundThreshold and not onSlope:
+
+				# Play bump sound if horizontal speed is above threshold
+				# (Removed the `and not onSlope` so it always triggers).
+				if abs(velocity.x) > bounceSoundThreshold:
 					audioPlayer.stream = bumpSound
 					audioPlayer.play()
 				break
@@ -503,9 +507,14 @@ func check_bounces():
 	if not head_overlappers.empty():
 		for body in head_overlappers:
 			if body in mapCollisions:
+				# Bounce upward
 				velocity.y = velocity.bounce(velocity.normalized()).y * bounceMultiplier * 0.6
+
+				# If we also want a little horizontal dampening
 				if abs(velocity.x) > bounceVelocityThreshold:
 					velocity.x *= bounceMultiplier
+
+				# Play bump sound if the vertical bounce is large enough
 				if abs(velocity.y) > bounceSoundThreshold:
 					audioPlayer.stream = bumpSound
 					audioPlayer.play()

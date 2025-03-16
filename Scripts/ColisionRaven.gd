@@ -6,48 +6,53 @@ onready var audioPlayer = $audioPlayerRaven
 
 var timer = 0.0
 var current_frame = 0
-var can_detect = false  # Start as false, enable later
-var borrado = false
-		
-func _ready():
-	#print("✅ Raven script is loaded!")  # Make sure script is running
-	if not borrado:
-		connect("body_entered", self, "_on_Area2D_body_entered")  # Force signal connection
-	randomize()  # Ensure proper randomness
-	yield(get_tree().create_timer(0.5), "timeout")  # Delay detection initially
-	can_detect = true  # Enable collision detection
-	#print("Raven is ready for real collisions!")
+var can_detect = false     # Enabled after 0.5s so collisions don't fire too early
+var borrado = false        # True once we've removed the CollisionShape2D
 
-	sprite.frame = 0  # Start on frame 0
+# We'll track flying time manually.
+var flight_timer = 0.0
+var flight_duration = 10.0
+
+func _ready():
+	# Force-connect the body_entered signal, just in case
+	if not borrado:
+		connect("body_entered", self, "_on_Area2D_body_entered")
+
+	randomize()  # Ensure better randomness for pick_random
+	# Wait 0.5 seconds, then enable collision detection
+	yield(get_tree().create_timer(0.5), "timeout")
+	can_detect = true
+	
+	# Set initial sprite frame and start processing
+	sprite.frame = 0
 	set_process(true)
-	set_physics_process(true)	
+	set_physics_process(true)
 
 func _process(delta):
-	timer -= delta  # Reduce timer
-	if timer <= 0:  # When timer runs out, switch frame
+	# Handle sprite frames
+	timer -= delta
+	if timer <= 0:
 		change_frame()
-	# Only move the sprite if it's in the flying animation
+
+	# If we’re in the “flying” animation, move diagonally
 	if can_detect and sprite.animation == "flying":
-		# Define the angle and speed
-		var angle = deg2rad(-60)  # Angle in degrees, for example, 45 degrees
-		var speed = 250  # Speed in pixels per second
-		
-		# Calculate the movement direction using the angle
-		var direction = Vector2(cos(angle), sin(angle))  # Direction based on angle
-		
-		# Move the sprite based on direction and speed, factoring in delta for smooth movement
-		sprite.position += direction * speed * delta  # Move the sprite smoothly over time
-		# Find and destroy the CollisionShape2D child node
+		var angle = deg2rad(-60)  # Adjust as needed
+		var speed = 250
+		var direction = Vector2(cos(angle), sin(angle))
+		sprite.position += direction * speed * delta
+
+		# Remove the CollisionShape2D if not already removed
 		if not borrado:
-			var collision_shape = $CollisionShape2D  # Access the child node by its name
+			var collision_shape = $CollisionShape2D
 			if collision_shape:
-				collision_shape.queue_free()  # Destroy the CollisionShape2D node
+				collision_shape.queue_free()
 				borrado = true
-		yield(get_tree().create_timer(10), "timeout")
-		print("Time exceeded. Destroying node.")
-		self.queue_free()  # Destroy the current node (removes it from the scene)
-		#	is_moving = false  # Stop further movement
-		#is_moving = false  # Stop further movement
+
+		# Track how long we've been flying
+		flight_timer += delta
+		if flight_timer >= flight_duration:
+			print("Time exceeded. Destroying node.")
+			queue_free()  # Safe to do now (no yield left to resume!)
 
 func change_frame():
 	if current_frame == 0:
@@ -65,40 +70,25 @@ func change_frame():
 		current_frame = pick_random([0, 3])  
 	elif current_frame == 3:
 		timer = rand_range(1.5, 3.0)
-		current_frame = pick_random([0, 2])  
-	sprite.frame = current_frame  
+		current_frame = pick_random([0, 2])
+	sprite.frame = current_frame
 
 func pick_random(choices):
 	return choices[randi() % choices.size()]
 
-
-# Detect collision only with the King and trigger animation + sound
+# Detect collision only with the King and trigger "flying" animation + sound
 func _on_Area2D_body_entered(body):
-	#print("Raven collided with:", body.name)
-	#print("TriggerZone collided with:", body.name)
 	if not can_detect:
-		#print("Collision ignored: not ready yet!")
-		return  # Prevents collision detection before it's allowed
-
-	#print("Collision detected!")
+		return  # Ignore if collision isn't allowed yet
 
 	if body.is_in_group("player"):
-		#print("King entered Raven's area!")
-		sprite.speed_scale = 1.5  # Set animation speed to 1.5x
-		sprite.play("flying")  # Ensure you have an animation named "flying"
-		# Add movement logic here
-
-		audioPlayer.stop()  
-		audioPlayer.stream = ravenSound  
+		sprite.speed_scale = 1.5
+		sprite.play("flying")
+		audioPlayer.stop()
+		audioPlayer.stream = ravenSound
 		audioPlayer.play()
-	else:
-		#print("Wrong group detected!")
-		#print("Body entered:", body.name)  # Check which object enters
-		#print("Groups:", body.get_groups())  # List all groups of the object
-		pass
 
-# Reset animation when King exits
+# Optional: Reset animation when King exits
 func _on_Area2D_body_exited(body):
 	if body.is_in_group("player"):
-		#print("King exited Raven's area!")
-		sprite.play("idle")  # Ensure an "idle" animation exists
+		sprite.play("idle")  # Ensure you have an "idle" animation

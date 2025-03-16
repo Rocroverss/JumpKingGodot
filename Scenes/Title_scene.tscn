@@ -35,7 +35,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.12549 ), Color( 1, 1, 1, 0.25098 ), Color( 1, 1, 1, 0.376471 ), Color( 1, 1, 1, 0.501961 ), Color( 1, 1, 1, 0.627451 ), Color( 1, 1, 1, 0.752941 ), Color( 1, 1, 1, 0.878431 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Label:visible")
+tracks/2/path = NodePath("pressx:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -59,7 +59,7 @@ tracks/3/keys = {
 "values": [ false, true ]
 }
 tracks/4/type = "method"
-tracks/4/path = NodePath("Label/Timer")
+tracks/4/path = NodePath("pressx/Timer")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/imported = false
@@ -100,7 +100,7 @@ tracks/1/keys = {
 "values": [ Vector2( 40, 72 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Label:visible")
+tracks/2/path = NodePath("pressx:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -140,18 +140,31 @@ offset = Vector2( 4, 0 )
 
 [node name="Label" type="Label" parent="."]
 visible = false
-margin_left = 200.0
-margin_top = 216.0
-margin_right = 280.0
-margin_bottom = 230.0
+margin_left = 194.0
+margin_top = 239.0
+margin_right = 296.0
+margin_bottom = 255.0
 custom_fonts/font = ExtResource( 3 )
-text = "Press Space"
+text = "Press X0 to jump"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Timer" type="Timer" parent="Label"]
+wait_time = 0.5
+
+[node name="pressx" type="Label" parent="."]
+visible = false
+margin_left = 194.0
+margin_top = 215.0
+margin_right = 288.0
+margin_bottom = 231.0
+custom_fonts/font = ExtResource( 3 )
+text = "Press X to jump"
+align = 1
+
+[node name="Timer" type="Timer" parent="pressx"]
 wait_time = 0.5
 
 [node name="musicplayer" type="AudioStreamPlayer" parent="."]
@@ -162,3 +175,4 @@ autoplay = true
 stream = ExtResource( 5 )
 
 [connection signal="timeout" from="Label/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="pressx/Timer" to="." method="_on_Timer_timeout"]

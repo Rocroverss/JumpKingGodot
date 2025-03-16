@@ -27,4 +27,5 @@ func _input(event):
 
 func _on_Timer_timeout():
 	$Label.visible = !$Label.visible
+	$pressx.visible = !$pressx.visible
 	pass # Replace with function body.

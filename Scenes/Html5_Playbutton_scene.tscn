@@ -15,9 +15,6 @@ margin_top = 88.0
 margin_right = 272.0
 margin_bottom = 216.0
 texture_normal = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="."]
 anchor_left = 0.5
@@ -30,9 +27,6 @@ margin_right = 277.0
 margin_bottom = 256.0
 custom_fonts/font = ExtResource( 3 )
 text = "Click to play"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TileMap" type="TileMap" parent="." groups=["map_collision"]]
 visible = false

@@ -40,7 +40,7 @@ var windGroundMultiplier = 5
 var jump_pressing : bool
 var left_pressing : bool
 var right_pressing : bool
-
+var iteratora = 0
 onready var sprite = $Sprite
 onready var collisionShape = $CollisionShape2D
 onready var audioPlayer = $AudioStreamPlayer
@@ -50,6 +50,7 @@ onready var splatTimer = $SplatTimer
 onready var velocityLine = $Line2D
 onready var mapCollisions = get_tree().get_nodes_in_group("map_collision")
 
+# Audio resources
 onready var jumpSound = load("res://Audio/King/Land/king_jump.wav")
 onready var iceJumpSound = load("res://Audio/King/Ice/king_jump.wav")
 onready var snowJumpSound = load("res://Audio/King/Snow/king_jump.wav")
@@ -58,19 +59,121 @@ onready var iceLandingSound = load("res://Audio/King/Ice/king_land.wav")
 onready var snowLandingSound = load("res://Audio/King/Snow/king_land.wav")
 onready var splatSound = load("res://Audio/King/Land/king_splat.wav")
 onready var bumpSound = load("res://Audio/King/Land/king_bump.wav")
+
+
+# Particle scenes
 onready var jumpParticle = preload("res://Entities/JumpParticle.tscn")
 onready var snowJumpParticle = preload("res://Entities/snowJumpParticle.tscn")
 
 var motionPoints : PoolVector2Array
+# Pc safe
+#var save_location = "res://save/save_state.json" 
+# Psvita
+var save_location = "user://save/save_state.json"
+# ---------------------------------------------------------------------------
+# Save/Load State
+# ---------------------------------------------------------------------------
+func save_state():
+	var save_data = {
+		"position": {
+			"x": position.x,
+			"y": position.y
+		},
+		"velocity": {
+			"x": velocity.x,
+			"y": velocity.y
+		},
+		"currentState": currentState,
+		"direction": direction,
+		"grounded": grounded,
+		"onSlope": onSlope,
+		"onIce": onIce,
+		"onSnow": onSnow,
+		"stunned": stunned,
+		"jumpPower": jumpPower,
+		"currentLevelX": currentLevelX,
+		"currentLevelY": currentLevelY
+	}
+	
+	var file = File.new()
+	if file.open(save_location, File.WRITE) == OK:
+		file.store_string(to_json(save_data))
+		file.close()
+		print("Game state saved!")
+	else:
+		print("error save")
+		print(save_location)
+		 
 
+func load_state():
+	var dir = Directory.new()
+	var folder_path = "user://save/"
+
+	# Check if the folder exists
+	if not dir.dir_exists(folder_path):
+		var err = dir.make_dir_recursive(folder_path)  # Create the folder if missing
+		if err == OK:
+			print("Save folder created successfully.")
+		else:
+			print("Failed to create save folder! Error code:", err)
+			
+	var file = File.new()
+	print(save_location)
+	if file.file_exists(save_location):
+		if file.open(save_location, File.READ) == OK:
+			var save_data = parse_json(file.get_as_text())
+			file.close()
+			
+			if save_data:
+				# Safely restore position
+				position = Vector2(
+					save_data["position"]["x"], 
+					save_data["position"]["y"]
+				)
+				
+				# Safely restore velocity
+				velocity = Vector2(
+					save_data["velocity"]["x"], 
+					save_data["velocity"]["y"]
+				)
+				
+				currentState = save_data["currentState"]
+				direction = save_data["direction"]
+				grounded = save_data["grounded"]
+				onSlope = save_data["onSlope"]
+				onIce = save_data["onIce"]
+				onSnow = save_data["onSnow"]
+				stunned = save_data["stunned"]
+				jumpPower = save_data["jumpPower"]
+				currentLevelX = save_data["currentLevelX"]
+				currentLevelY = save_data["currentLevelY"]
+				
+				print("Game state loaded!")
+			else:
+				print("Failed to load save data: Corrupt file")
+	else:
+		print("No save file found!")
+		print(save_location)
+		
+
+# ---------------------------------------------------------------------------
+# _ready
+# ---------------------------------------------------------------------------
 func _ready():
 	motionPoints = PoolVector2Array()
 	motionPoints.resize(2)
+	# Example: Start off in the SPLAT state or whichever you want
 	# currentState = state.SPLAT
 	# splatTimer.start()
 
+	# Load the saved state on ready (optional)
+	load_state()
+
+# ---------------------------------------------------------------------------
+# _physics_process
+# ---------------------------------------------------------------------------
 func _physics_process(delta):
-	# Wind pushes horizontally every frame
+	# Apply wind if you’re using WindManager logic
 	velocity.x += WindManager.currentVelocity * windVelocityMultiplier
 
 	check_grounded()
@@ -86,9 +189,16 @@ func _physics_process(delta):
 	apply_gravity(delta)
 	handle_movement(delta)
 	detect_slopes()
-
+	if iteratora == 300:
+		save_state()
+		print("Just saved state because King is now idle.")
+		iteratora = 0
+	else: 
+		iteratora = iteratora + 1;
+		#print(iteratora)
 	previous_y_vel = velocity.y
 
+	# Debug line (just demonstration)
 	motionPoints[0] = Vector2(0, 0)
 	motionPoints[1] = Vector2(WindManager.currentVelocity * windVelocityMultiplier * 4, 0)
 	velocityLine.points = motionPoints
@@ -363,6 +473,9 @@ func jump(power: float, dir: int):
 
 	jumpPower = 0
 
+	# Save state whenever the character jumps
+	save_state()
+
 func check_grounded():
 	var overlappers = $GroundedArea.get_overlapping_bodies()
 	grounded = false
@@ -399,7 +512,7 @@ func check_bounces():
 				break
 
 # ---------------------------------------------------------------------------
-# Animations, etc.
+# Animations
 # ---------------------------------------------------------------------------
 func handle_animations():
 	match currentState:
@@ -430,3 +543,10 @@ func canMove():
 
 func _on_SplatTimer_timeout():
 	stunned = false
+
+
+
+func _on_Area2D_body_entered(body):
+	if body.is_in_group("raven"):
+		print("Collision with raven from king!")
+

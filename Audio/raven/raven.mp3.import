@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/raven.mp3-b4e439f60adc3596db5bce5bb778de0e.mp3str"
+
+[deps]
+
+source_file="res://Audio/raven/raven.mp3"
+dest_files=[ "res://.import/raven.mp3-b4e439f60adc3596db5bce5bb778de0e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
